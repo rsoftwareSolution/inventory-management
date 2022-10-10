@@ -1,19 +1,27 @@
 package com.inventory.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import lombok.*;
+
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
+@ToString
+@Getter
+@Setter
 @Table(name = "CUSTOMER")
+@AllArgsConstructor
+@NoArgsConstructor
 public class Customer implements Serializable {
 
-    private static final Long serialVersionUID = 2L ;
+    private static final long serialVersionUID = -4286189283657327909L;
 
     @Id
-    @Column
-    private Integer cusomerId;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "CUSTOMER_ID")
+    private Long customerId;
+
+    @Column(name = "CUSTOMER_NAME")
+    private String customerName;
 
 }
