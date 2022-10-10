@@ -1,11 +1,14 @@
 package com.inventory.service;
 
-import com.inventory.entity.Customer;
+import com.inventory.entity.CustomerDetails;
 
 public interface CustomerService {
 
-    Iterable<Customer> findAll();
+    /**
+     * This method will use to get the list of all customers.
+     */
+    Iterable<CustomerDetails> findAll();
 
-    Customer saveCustomer(Customer customer);
+    CustomerDetails saveCustomer(CustomerDetails customer);
 
 }
