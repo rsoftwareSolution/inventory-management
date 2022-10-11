@@ -25,8 +25,8 @@ import java.io.Serializable;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "SUPPLIER")
-public class Supplier implements Serializable {
+@Table(name = "SUPPLIER_DETAILS")
+public class SupplierDetails implements Serializable {
 
     private static final long serialVersionUID = 599278416359744768L;
 
