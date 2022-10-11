@@ -1,6 +1,6 @@
 package com.inventory.serviceImpl;
 
-import com.inventory.entity.Customer;
+import com.inventory.entity.CustomerDetails;
 import com.inventory.repository.CustomerRepository;
 import com.inventory.service.CustomerService;
 import org.slf4j.Logger;
@@ -17,12 +17,14 @@ public class CustomerServiceImpl implements CustomerService {
     private CustomerRepository customerRepository;
 
     @Override
-    public Iterable<Customer> findAll() {
+    public Iterable<CustomerDetails> findAll() {
+        Log.info("Showing list of customers");
         return customerRepository.findAll();
     }
 
     @Override
-    public Customer saveCustomer(Customer customer) {
+    public CustomerDetails saveCustomer(CustomerDetails customer) {
+        Log.info("Save Successfully customer for customer id - {}");
         return customerRepository.save(customer);
     }
 }
